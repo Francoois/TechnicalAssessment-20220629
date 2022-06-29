@@ -1,0 +1,30 @@
+{
+    "panels": [
+        {
+            "name": "Panel 1",
+            "icon": "/icons/ICON_TOOL1.svg",
+            "content": "component-1"
+        },
+        {
+            "name": "Panel 2",
+            "icon": "/icons/ICON_TOOL2.svg",
+            "content": "component-2"
+        },
+        {
+            "name": "Panel 3",
+            "icon": "/icons/ICON_TOOL3.svg",
+            "content": "component-3"
+        },
+        {
+            "name": "Panel 4",
+            "icon": "/icons/ICON_TOOL4.svg",
+            "content": "component-4"
+        },
+        {
+            "name": "Panel 5",
+            "icon": "/icons/ICON_TOOL5.svg",
+            "content": "component-5"
+        }
+
+    ]
+}

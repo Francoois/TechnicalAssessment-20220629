@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="71" height="71" viewBox="0 0 71 71">
+  <defs>
+    <clipPath id="clip-ICON_TOOL2">
+      <rect width="71" height="71"/>
+    </clipPath>
+  </defs>
+  <g id="ICON_TOOL2" clip-path="url(#clip-ICON_TOOL2)">
+    <g id="Groupe_22931" data-name="Groupe 22931" transform="translate(4670.964 16836)">
+      <path id="Tracé_12480" data-name="Tracé 12480" d="M27.6,19.3H12.2a1.5,1.5,0,0,1,0-3H27.6a1.538,1.538,0,0,1,1.5,1.5A1.473,1.473,0,0,1,27.6,19.3Z" transform="translate(-4649.964 -16811)" fill="#fff"/>
+      <path id="Tracé_12481" data-name="Tracé 12481" d="M27.6,11.6H12.2a1.5,1.5,0,0,1,0-3H27.6a1.538,1.538,0,0,1,1.5,1.5A1.415,1.415,0,0,1,27.6,11.6Z" transform="translate(-4649.964 -16811)" fill="#fff"/>
+      <path id="Tracé_12482" data-name="Tracé 12482" d="M27.6,3.9H12.2a1.538,1.538,0,0,1-1.5-1.5A1.538,1.538,0,0,1,12.2.9H27.6a1.538,1.538,0,0,1,1.5,1.5A1.473,1.473,0,0,1,27.6,3.9Z" transform="translate(-4649.964 -16811)" fill="#fff"/>
+      <path id="Tracé_12483" data-name="Tracé 12483" d="M2.4,4.8h0A2.433,2.433,0,0,1,0,2.4H0A2.433,2.433,0,0,1,2.4,0h0A2.433,2.433,0,0,1,4.8,2.4h0A2.433,2.433,0,0,1,2.4,4.8Z" transform="translate(-4649.964 -16811)" fill="#fff"/>
+      <path id="Tracé_12484" data-name="Tracé 12484" d="M2.4,12.5h0A2.433,2.433,0,0,1,0,10.1H0A2.433,2.433,0,0,1,2.4,7.7h0a2.433,2.433,0,0,1,2.4,2.4h0A2.433,2.433,0,0,1,2.4,12.5Z" transform="translate(-4649.964 -16811)" fill="#fff"/>
+      <path id="Tracé_12485" data-name="Tracé 12485" d="M2.4,20.2h0A2.433,2.433,0,0,1,0,17.8H0a2.433,2.433,0,0,1,2.4-2.4h0a2.433,2.433,0,0,1,2.4,2.4h0A2.433,2.433,0,0,1,2.4,20.2Z" transform="translate(-4649.964 -16811)" fill="#fff"/>
+    </g>
+  </g>
+</svg>
