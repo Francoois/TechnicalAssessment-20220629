@@ -8,8 +8,7 @@ import style from "./Navigation.scss";
  * This is a simple suggestion for a component system, you're free to organize your code however you want.
  */
 export class Navigation extends HTMLElement {
-    dataList: HTMLUListElement;
-    titleElement: HTMLHeadingElement;
+    listElement: HTMLUListElement;
 
     static get observedAttributes() { return ["title"];}
 
@@ -32,8 +31,8 @@ export class Navigation extends HTMLElement {
         styleElement.innerHTML = style;
         this.shadowRoot?.appendChild(styleElement);
 
-        this.dataList = this.shadowRoot!.querySelector(".data-list") as HTMLUListElement;
-        this.titleElement = this.shadowRoot!.querySelector("h1") as HTMLHeadingElement;
+        // this.dataList = this.shadowRoot!.querySelector(".data-list") as HTMLUListElement;
+        this.listElement = this.shadowRoot!.querySelector("#nav-button-list") as HTMLUListElement;
 
         this.renderFirstPanelNameExample();
     }
@@ -48,9 +47,14 @@ export class Navigation extends HTMLElement {
      * Example on how to use the json data
      */
     renderFirstPanelNameExample() {
-        const li = document.createElement("li");
-        this.dataList.appendChild(li);
-        li.textContent = json.panels[0].name;
+        // const li = document.createElement("li");
+        // this.dataList.appendChild(li);
+        // li.textContent = json.panels[0].name;
+        // let buttonList: Element[] = [];
+        json.panels.forEach(panel=>{
+            this.listElement.appendChild(``)
+        });
+
     }
 
 
@@ -66,11 +70,11 @@ export class Navigation extends HTMLElement {
         if (newValue != oldValue) {
             switch(name) {
                 case "title":
-                    this.titleElement.textContent = newValue;
+                    // this.titleElement.textContent = newValue;
                     break;
             }
         }
     }
 }
 // to make the custom element available by tag name
-customElements.define("navigation", Navigation);
+customElements.define("navigation-component", Navigation);

@@ -1,25 +1,28 @@
-import "./dummy.scss";
+import "./NavigationButton.scss";
 
 /**
  * You don't need to edit this, they should function as is.
  */
 
-function NavigationButton(buttonName: string, iconPath: string): CustomElementConstructor {
+function createDummyComponent(componentTag: string): CustomElementConstructor {
   const cls = class extends HTMLElement {
     constructor() {
       super();
     }
 
     connectedCallback() {
+      this.classList.add("dummy-component");
+      this.classList.add(componentTag);
 
-      // this.style.backgroundColor = componentTag;
+      this.style.backgroundColor = componentTag;
       this.innerHTML = `
-        <li>
-          <button type="button">
-            <img src="${iconPath}">
-          </button>
-        </li>
-        `;
+            <h1>${componentTag.split("-").join(" ")}</h1> 
+            <container> 
+                <div class="block-1"> </div>
+                <div class="block-2"> </div>
+                <div class="block-3"> </div>
+            </container>
+            `;
     }
   };
   customElements.define(componentTag, cls);
