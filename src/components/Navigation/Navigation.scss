@@ -1,11 +1,7 @@
-.navigation{
-  display: flex ;
-  flex-flow: row nowrap;
-}
-
-li {
+ul, li {
   list-style: none;
   display: flex ;
   flex-flow: row nowrap;
+  margin: 0;
+  padding: 0;
 }
-
