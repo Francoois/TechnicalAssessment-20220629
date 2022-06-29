@@ -11,7 +11,9 @@
 You can then click on the link in the console, or go to http://localhost:3000
 
 ## Objective
-You're asked to create a simple toolbar system. Given the provided data, you need to create a list of buttons, that will open a corresponding panel on the first click. They are displayed as "selected" when their panel is open. If you click on it again, it will close the current panel.
+You're asked to create a simple toolbar system. 
+* Given the provided data, you need to create a list of buttons, that will open a corresponding panel on the first click. 
+* They are displayed as "selected" when their panel is open. If you click on it again, it will close the current panel.
 Clicking a different toolbar button will close the currently opened panel, and open the new one.
 
 A panel has the following functionalities:

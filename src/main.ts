@@ -10,11 +10,11 @@ export { SampleComponent } from './components/SampleComponent/SampleComponent'
 
 // example of nesting components dynamically
 // to achieve this with shadow DOM components, you need to have a <slot> </slot> element in its shadow DOM.
-const sampleComponent = document.getElementById("SampleComponent") as HTMLElement;
-
-const SlottedTitle = document.createElement("h2");
-SlottedTitle.textContent = "Slotted subtitle example";
-sampleComponent.appendChild(SlottedTitle);
+// const sampleComponent = document.getElementById("Navigation") as HTMLElement;
+//
+// const SlottedTitle = document.createElement("h2");
+// SlottedTitle.textContent = "Slotted subtitle example";
+// sampleComponent.appendChild(SlottedTitle);
 
 
 //Start your code here

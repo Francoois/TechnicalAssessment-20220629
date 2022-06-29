@@ -4,5 +4,22 @@
   font-family: Roboto, Helvetica, Arial, sans-serif;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  //margin-top: 60px;
+  height: 100%;
+}
+
+html, body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(65,72,80);
+}
+
+#navigation{
+  height: 13%;
+  border-bottom: solid black 1px;
+}
+#content-zone{
+  height: 87%;
 }
