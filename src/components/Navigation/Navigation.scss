@@ -1,3 +1,11 @@
+.navigation{
+  display: flex ;
+  flex-flow: row nowrap;
+}
+
 li {
   list-style: none;
+  display: flex ;
+  flex-flow: row nowrap;
 }
+

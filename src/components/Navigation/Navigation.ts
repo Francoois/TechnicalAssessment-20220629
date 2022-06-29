@@ -32,7 +32,6 @@ export class Navigation extends HTMLElement {
         styleElement.innerHTML = style;
         this.shadowRoot?.appendChild(styleElement);
 
-        // this.dataList = this.shadowRoot!.querySelector(".data-list") as HTMLUListElement;
         this.listElement = this.shadowRoot!.querySelector("#nav-button-list") as HTMLUListElement;
 
         this.renderFirstPanelNameExample();
@@ -48,12 +47,7 @@ export class Navigation extends HTMLElement {
      * Example on how to use the json data
      */
     renderFirstPanelNameExample() {
-        // const li = document.createElement("li");
-        // this.dataList.appendChild(li);
-        // li.textContent = json.panels[0].name;
-        // let buttonList: Element[] = [];
         json.panels.forEach(panel=>{
-            // let elem = createNavigationButton(panel.name, panel.icon);
             this.listElement.appendChild(new NavigationButton(panel.name, panel.icon));
         });
     }
