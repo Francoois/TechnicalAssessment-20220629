@@ -1,6 +1,7 @@
 import html from "./Navigation.html?raw";
 import json from "../../data/Panels.json";
 import style from "./Navigation.scss";
+import {NavigationButton} from "./NavigationButton/NavigationButton";
 
 /**
  * Sample Component, importing Styles and HTML.
@@ -52,11 +53,10 @@ export class Navigation extends HTMLElement {
         // li.textContent = json.panels[0].name;
         // let buttonList: Element[] = [];
         json.panels.forEach(panel=>{
-            this.listElement.appendChild(``)
+            // let elem = createNavigationButton(panel.name, panel.icon);
+            this.listElement.appendChild(new NavigationButton(panel.name, panel.icon));
         });
-
     }
-
 
     /**
      * This method is called everytime an attribute changes.

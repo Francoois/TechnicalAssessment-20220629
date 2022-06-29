@@ -4,10 +4,15 @@ import "./NavigationButton.scss";
  * You don't need to edit this, they should function as is.
  */
 
-function NavigationButton(buttonName: string, iconPath: string): CustomElementConstructor {
-  const cls = class extends HTMLElement {
-    constructor() {
+export class NavigationButton extends HTMLElement {
+
+  buttonName: string;
+  iconPath: string
+
+    constructor(buttonName: string, iconPath: string) {
       super();
+      this.buttonName=buttonName;
+      this.iconPath=iconPath;
     }
 
     connectedCallback() {
@@ -16,15 +21,14 @@ function NavigationButton(buttonName: string, iconPath: string): CustomElementCo
       this.innerHTML = `
         <li>
           <button type="button">
-            <img src="${iconPath}">
+            <img src="${this.iconPath}">
           </button>
         </li>
         `;
     }
-  };
-  customElements.define(buttonName, cls);
-  return cls;
 }
+customElements.define("nav-button", NavigationButton );
+
 
 // export const DummyComponentOne = createDummyComponent("component-1");
 // export const DummyComponentTwo = createDummyComponent("component-2");
