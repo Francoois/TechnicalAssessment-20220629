@@ -1,0 +1,13 @@
+@use '../Navigation/Navigation';
+
+.nav-button {
+  height: Navigation.$button-size;
+  width: Navigation.$button-size;
+
+  font-size: 1.25em;
+  background: transparent;
+}
+
+* {
+  border: red 1px solid;
+}
