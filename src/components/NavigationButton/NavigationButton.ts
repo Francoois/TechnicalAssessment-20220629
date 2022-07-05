@@ -1,14 +1,10 @@
-import style from "./NavigationButton.scss";
+// import "./NavigationButton.scss";
 
 export function createNavButton(componentTag: string, componentIcon: string): CustomElementConstructor {
   const cls = class extends HTMLLIElement {
 
     constructor() {
       super();
-
-      const styleElement = document.createElement("style");
-      styleElement.innerHTML = style;
-      this.shadowRoot?.appendChild(styleElement);
     }
 
     connectedCallback() {
@@ -16,6 +12,7 @@ export function createNavButton(componentTag: string, componentIcon: string): Cu
       this.classList.add(componentTag);
 
       this.innerHTML = `
+        <link href="./src/components/NavigationButton/NavigationButton.scss" rel="stylesheet">
         <button type="button" class="nav-button">
           <img src="${componentIcon}" alt="icon"/>
         </button>
