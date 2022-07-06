@@ -6,11 +6,26 @@ export function createNavButton(componentTag: string, componentIcon: string): Cu
 
     constructor() {
       super();
+
+      // add click listener
+      this.addEventListener('click', () => {
+        this.triggerSelected();
+      });
     }
 
-    onclick=()=>{
+    triggerSelected() {
+      let event = new CustomEvent('select', {
+        bubbles: true,
+        detail: {
+          name: componentTag
+        }
+      });
+      this.dispatchEvent(event);
+    }
+
+    toggleActivated=()=>{
       this.activated=!this.activated;
-      console.log("Activated now :"+this.activated);
+
       if(this.activated){
         this.classList.add(cls.selected);
       } else {
@@ -24,7 +39,7 @@ export function createNavButton(componentTag: string, componentIcon: string): Cu
 
       this.innerHTML = `
 <!--        <link href="./src/components/NavigationButton/NavigationButton.scss" rel="stylesheet">-->
-        <button type="button" class="nav-button" onclick="this.parentElement.onclick()">
+        <button type="button" class="nav-button">
           <img src="${componentIcon}" alt="icon"/>
         </button>
         `;

@@ -33,11 +33,22 @@ export class NavigationComponent extends HTMLElement {
         this.listElement = this.shadowRoot!.querySelector("#nav-button-list") as HTMLUListElement;
 
         this.renderFirstPanelNameExample();
+
+        this.shadowRoot?.addEventListener('select', e => {
+            let selectedButton = (<CustomEvent>e).detail.name;
+
+            let listButton:NodeListOf<HTMLElement> = this.listElement.querySelectorAll("li");
+            // sync selection for all items
+            // @ts-ignore
+            for (const button of listButton) {
+                if(button.activated || button.className==selectedButton) button.toggleActivated();
+            }
+        });
     }
 
     renderFirstPanelNameExample() {
         json.panels.forEach(panel=>{
-            let name:string = panel.content+"button";
+            let name:string = panel.content+"-button";
             const buttonComponent = createNavButton(name, panel.icon);
             this.listElement.appendChild(new buttonComponent());
         });
