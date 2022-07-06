@@ -1,17 +1,15 @@
-import html from "./Navigation.html?raw";
+import html from "./NavigationComponent.html?raw";
 import json from "../../data/Panels.json";
-import style from "./Navigation.scss";
-import {createNavButton} from "../NavigationButton/NavigationButton";
+import style from "./NavigationComponent.scss";
+import {createNavButton} from "./NavigationButton/NavigationButton";
 
 /**
  * Sample Component, importing Styles and HTML.
  * This component is then referenced in main.ts, to be defined at runtime.
  * This is a simple suggestion for a component system, you're free to organize your code however you want.
  */
-export class Navigation extends HTMLElement {
+export class NavigationComponent extends HTMLElement {
     listElement: HTMLUListElement;
-
-    static get observedAttributes() { return ["title"];}
 
     /** Warning
      * You cannot add attributes within the constructor, or alter its DOM. 
@@ -37,23 +35,28 @@ export class Navigation extends HTMLElement {
         this.renderFirstPanelNameExample();
     }
 
-    /**
-     * Is called once the component is initialized and added to the DOM
-     * */
-    connectedCallback() {
-    }
-
-    /**
-     * Example on how to use the json data
-     */
     renderFirstPanelNameExample() {
         json.panels.forEach(panel=>{
             let name:string = panel.content+"button";
             const buttonComponent = createNavButton(name, panel.icon);
-            // const buttonComponent = document.createElement('div', { is: name })
             this.listElement.appendChild(new buttonComponent());
         });
     }
+
+    static get observedAttributes() { return ["selected"];}
+
+    set selected(string:string){
+        this.setAttribute("selected", string);
+    }
+    get selected(){
+        let sel = this.getAttribute("selected");
+        return (sel === null) ? 'none' : sel ;
+    }
+
+    /**
+     * Is called once the component is initialized and added to the DOM
+     * */
+    connectedCallback() {}
 
     /**
      * This method is called everytime an attribute changes.
@@ -66,7 +69,7 @@ export class Navigation extends HTMLElement {
     attributeChangedCallback(name: string, oldValue: string, newValue: string) {
         if (newValue != oldValue) {
             switch(name) {
-                case "title":
+                case "selected":
                     // this.titleElement.textContent = newValue;
                     break;
             }
@@ -74,4 +77,4 @@ export class Navigation extends HTMLElement {
     }
 }
 // to make the custom element available by tag name
-customElements.define("navigation-component", Navigation);
+customElements.define("navigation-component", NavigationComponent);
